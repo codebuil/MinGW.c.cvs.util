@@ -5,8 +5,16 @@ PORT="8000"
 NICK=$2
 
 # Conecte-se ao servidor na porta especificada
-nc $HOST $PORT | while read line; do
-echo "$NICK:$line"
+nc $HOST $PORT | while read message; do
+ case "$message" in
+    "QUIT")
+      echo "Usuário desconectado."
+      break
+      ;;
+    *)
+      echo "$message"
+      ;;
+  esac
 done
 
 
