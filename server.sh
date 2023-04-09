@@ -9,7 +9,7 @@ printf "\ec\e[44;37mstart server....\n"
 # Inicia o loop de servidor
 while true; do
     # Aguarda a conexão de um cliente
-    nc -lv $PORT > request.txt
+    nc -l -w1 $PORT > request.txt
 
     # Extrai o nome do arquivo da primeira linha da solicitação HTTP
     FILENAME=$(head -n 1 request.txt | cut -d' ' -f2)
