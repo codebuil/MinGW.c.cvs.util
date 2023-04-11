@@ -13,7 +13,7 @@ IFS=';' read -ra lines <<< "$input"
 # Loop através de cada linha de chaves e valores
 for line in "${lines[@]}"; do
   # Adiciona um tab no início da linha
-  registry+=$'\t'
+  registry+=$''
   # Divide a linha em chaves e valores separados por vírgula
   IFS=',' read -ra items <<< "$line"
   # Loop através de cada item da linha
@@ -23,7 +23,7 @@ for line in "${lines[@]}"; do
       registry+="${items[i]}:\n"
     # Caso contrário, adicione o valor
     else
-      registry+="\t\t${items[i]}\n"
+      registry+="\t${items[i]}\n"
     fi
   done
   # Remove a última vírgula
