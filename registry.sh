@@ -29,7 +29,7 @@ for line in "${lines[@]}"; do
   # Remove a última vírgula
   registry=${registry%}
   # Adiciona uma quebra de linha
-  registry+=$'\n'
+  registry+=$''
 done
 
 # Imprime o registro final
