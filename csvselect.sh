@@ -16,5 +16,5 @@ while read line; do
 	fi 
 
     # Imprime uma nova linha para separar as linhas do CSV
-    echo ""
+   
 done < "$input_file"
