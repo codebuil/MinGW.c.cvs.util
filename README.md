@@ -4,7 +4,7 @@
 bash files to old pcs
 and smalls distro of linux
 
-and high stadys of unix bash files
+and stadys of unix bash files
 on c code change the line enter to mac or linux tested on MinGw
 
 
