@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
         printf("Error opening file %s\n", filename);
         return 1;
     }
-
+    heads();
     while (fgets(line, MAX_LINE_LENGTH, fp)) {
         // Replace newline with null terminator
         line[strcspn(line, "\n")] = '\0';
@@ -43,11 +43,11 @@ int main(int argc, char *argv[]) {
         }
 
         // Print fields separated by tabs
-	  heads();
+	  printf("<tr style=\"background-color: #3498db; color: #fff;\">\n");
         for (int j = 0; j < i; j++) {
-		printf("<tr style=\"background-color: #3498db; color: #fff;\">\n");
+		
             printf("<th>%s</th>\n", fields[j]);
-		printf("\n</tr>\n");
+		
         }
         printf("</tr>\n");
     }
